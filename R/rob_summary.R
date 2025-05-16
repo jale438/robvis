@@ -330,17 +330,17 @@ rob_summary_quadas2 <- function(data,
       "Risk of Bias",
       values = c(
         l = rob_colours$low_colour,
-        s = rob_colours$concerns_colour,
+        s = rob_colours$na_colour,
         h = rob_colours$high_colour,
         n = rob_colours$ni_colour,
-        x = rob_colours$na_colour
+        x = rob_colours$concerns_colour,
       ),
       labels = c(
         n = "  No information   ",
         h = "  High risk of bias   ",
         s = "  Unclear      ",
         l = "  Low risk of bias  ",
-        x = "  N/A  "
+        x = "  Unclear      "
       ),
       drop = TRUE,
       limits = force
