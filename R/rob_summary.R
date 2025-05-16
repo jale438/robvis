@@ -338,7 +338,7 @@ rob_summary_quadas2 <- function(data,
       labels = c(
         n = "  No information   ",
         h = "  High risk of bias   ",
-        s = "  Some concerns      ",
+        s = "  Unclear      ",
         l = "  Low risk of bias  ",
         x = "  N/A  "
       ),
