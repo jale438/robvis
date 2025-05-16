@@ -513,7 +513,7 @@ rob_traffic_light_quadas2 <- function(data,
                         max_domain_column = max_domain_column,
                         domain_names = domain_names,
                         overall = overall,
-                        levels = c("h", "s", "l", "n", "x"))
+                        levels = c("h", "u", "l", "n", "x"))
 
   ssize <- psize - (psize / 4)
 
@@ -542,14 +542,14 @@ rob_traffic_light_quadas2 <- function(data,
     ggplot2::scale_colour_manual(
       values = c(
         h = rob_colours$high_colour,
-        s = rob_colours$concerns_colour,
+        u = rob_colours$concerns_colour,
         l = rob_colours$low_colour,
         n = rob_colours$ni_colour,
         x = rob_colours$na_colour
       ),
       labels = c(
         h = "High",
-        s = "Some concerns",
+        u = "Unclear",
         l = "Low",
         n = "No information",
         x = "Not applicable"
@@ -560,14 +560,14 @@ rob_traffic_light_quadas2 <- function(data,
     ggplot2::scale_shape_manual(
       values = c(
         h = 120,
-        s = 45,
+        u = 45,
         l = 43,
         n = 63,
         x = 32
       ),
       labels = c(
         h = "High",
-        s = "Some concerns",
+        u = "Unclear",
         l = "Low",
         n = "No information",
         x = "Not applicable"
