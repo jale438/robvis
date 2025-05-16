@@ -498,7 +498,7 @@ get_judgements <- function(tool){
 
   if (tool == "QUADAS-2") {
     values = c("High",
-               "Some concerns",
+               "Unclear",
                "Low",
                "No information")
 
