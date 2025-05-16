@@ -321,7 +321,7 @@ rob_summary_quadas2 <- function(data,
                              overall,
                              weighted,
                              domain_names,
-                             levels = c("x","n","h","s","l"))
+                             levels = c("x","n","h","u","l"))
 
   plot <-
     ggplot2::ggplot(data = rob.tidy) +
@@ -330,17 +330,17 @@ rob_summary_quadas2 <- function(data,
       "Risk of Bias",
       values = c(
         l = rob_colours$low_colour,
-        s = rob_colours$na_colour,
+        u = rob_colours$concerns_colour,
         h = rob_colours$high_colour,
         n = rob_colours$ni_colour,
-        x = rob_colours$concerns_colour,
+        x = rob_colours$na_colour,
       ),
       labels = c(
         n = "  No information   ",
         h = "  High risk of bias   ",
-        s = "  Unclear      ",
+        u = "  Unclear    ",
         l = "  Low risk of bias  ",
-        x = "  Unclear      "
+        x = "  Not applicable "
       ),
       drop = TRUE,
       limits = force
